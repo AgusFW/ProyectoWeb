@@ -45,7 +45,7 @@ public class SociosDAO
                LocalDate fecha = rs.getDate("fnac").toLocalDate();
                String telefono=rs.getString("teléfono");
                String email=rs.getString("email");
-                              boolean activo=rs.getBoolean("activo");                 
+               boolean activo=rs.getBoolean("activo");                 
                Socios s1=new Socios(id,nombre,apellido,direccion,localidad,fecha,telefono,email,activo);
                lista.add(s1);                
 
@@ -84,7 +84,7 @@ public class SociosDAO
                 String direccion=rs.getString("direccion");
                 String localidad=rs.getString("localidad");
                 LocalDate fnac = rs.getDate("fnac").toLocalDate();
-                String telefono=rs.getString("teléfono");
+                String telefono=rs.getString("telefono");
                 String email=rs.getString("email");
                                 boolean activo=rs.getBoolean("activo");                 
                 s1=new Socios(id,nombre,apellido,direccion,localidad,fnac,telefono,email,activo);
@@ -109,7 +109,7 @@ public class SociosDAO
         
         try
         {
-            ps=conexion.prepareStatement("insert into socios (nombre,apellido,direccion,localidad,fnac,teléfono,email,activo) values (?,?,?,?,?,?,?,?)");
+            ps=conexion.prepareStatement("insert into socios (nombre,apellido,direccion,localidad,fnac,telefono,email,activo) values (?,?,?,?,?,?,?,?)");
             ps.setString(1, s1.getNombre());
             ps.setString(2, s1.getApellido());
             ps.setString(3, s1.getDireccion());
@@ -154,7 +154,7 @@ public class SociosDAO
         PreparedStatement ps;        
         try
         {
-            ps=conexion.prepareStatement("update socios set nombre=?,apellido=?,direccion=?,localidad=?,fnac=?,teléfono=?,email=?,activo=? where idSocio=?");
+            ps=conexion.prepareStatement("update socios set nombre=?,apellido=?,direccion=?,localidad=?,fnac=?,telefono=?,email=?,activo=? where idSocio=?");
             ps.setString(1, s1.getNombre());
             ps.setString(2, s1.getApellido());
             ps.setString(3, s1.getDireccion());

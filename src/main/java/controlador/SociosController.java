@@ -54,7 +54,7 @@ public class SociosController extends HttpServlet
                         String direccion=request.getParameter("direccion");
                         String localidad=request.getParameter("localidad");            
                         LocalDate fecha =LocalDate.parse(request.getParameter("fnac"));
-                        String telefono=request.getParameter("teléfono");
+                        String telefono=request.getParameter("telefono");
                         String email=request.getParameter("mail");
                         
                         
@@ -79,7 +79,7 @@ public class SociosController extends HttpServlet
                         String direccion=request.getParameter("direccion");
                         String localidad=request.getParameter("localidad");            
                         LocalDate fecha =LocalDate.parse(request.getParameter("fnac")); 
-                        String telefono=request.getParameter("teléfono");
+                        String telefono=request.getParameter("telefono");
                         String email=request.getParameter("mail");
                                                 
                         Socios s1=new Socios(0,nombre,apellido,direccion,localidad,fecha,telefono,email,true);
