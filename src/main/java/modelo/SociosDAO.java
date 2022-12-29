@@ -43,7 +43,7 @@ public class SociosDAO
                String direccion=rs.getString("direccion");
                String localidad=rs.getString("localidad");             
                LocalDate fecha = rs.getDate("fnac").toLocalDate();
-               String telefono=rs.getString("teléfono");
+               String telefono=rs.getString("telefono");
                String email=rs.getString("email");
                boolean activo=rs.getBoolean("activo");                 
                Socios s1=new Socios(id,nombre,apellido,direccion,localidad,fecha,telefono,email,activo);

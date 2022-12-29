@@ -3,8 +3,6 @@
 <%@page import="modelo.SociosDAO" %>
 <%@page import="java.util.List"%>
 
-
-
 <!DOCTYPE html>
 <html>
     <head>
@@ -18,15 +16,15 @@
         <script src="https://kit.fontawesome.com/2cbbc87d30.js" crossorigin="anonymous"></script>
 
     </head>
-    <body>
-        <h1>Listado de Socios del Gym</h1>
+    <body style="background-color: rgb(74, 5, 74)">
+        <h1 class="d-flex justify-content-center" style="color: white; margin-top: 3%">Listado de Socios</h1>
         
         
-        <div class="container">
+        <div class="container text-center">
             <div class="row">   
-                <a class="btn btn-primary col-4 m-4" href="SociosController?accion=nuevo">Agregar Socio</a>
+                <a class="btn btn-light col-4 m-4" href="SociosController?accion=nuevo">Agregar Socio</a>
                 
-                <table class="table table-primary">
+                <table class="table table-light">
                     <thead>
                             <th>id</th>
                             <th>Nombre</th>
